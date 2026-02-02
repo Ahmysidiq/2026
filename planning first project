@@ -1,0 +1,113 @@
+TASK
+ How attackers enumerate Linux systems (3,5,6,8,11,12)
+ 	Network reachability and services ::::____::::
+
+	Files and permissions they can abuse  ::::____::::
+
+	Users with odd privileges   ::::____::::
+
+	Processes with exploitable behavior ::::____::::
+
+	Logs that show interesting activity ::::____::::
+	
+	
+IN SHORT
+
+	enumerates risk
+	
+	labels why it’s risky
+
+	documents how to fix it
+
+	optionally hardens the system
+
+
+ How defenders identify and Reduce Risk
+ 	Identify Risk
+ 	Reduce Risk
+ 
+ 
+ BUILDING
+ 		A tool that 
+ 			enumereates insecure Linux configurations  ( BASH)
+		 	Flags common attack Vectors
+DOCUMENTATION 
+		Human Readable Security report
+		
+ADDITIONAL WORK
+		Apply safe hardening actions with user confirmation
+		
+		
+		
+CHCECKING 
+		 Attackers Abuse for privilege Escalation
+		 	World Writable files ( group user and others)
+		 	use SUID and GUID
+				Identify risky User and wrong privileges 
+					CHECK users with UID 0
+					Users with sehll acc
+					
+Listening to ports for openeings and Unnecessary backgrounds 
+
+Login attempts
+	check failed for brute force 
+	Check log of file permissions
+	
+	
+	
+	DOCUMENTATION (each process)
+Title
+Timestamp
+Risk Category
+Explanation of Findings 
+Suggested mittigation and easy run up code (bash)
+
+
+ADDITIONALLY 
+	confirmation by user just to show trust, control and consent
+	
+	
+DOCUMENTATION (Report)
+
+	Overview
+	Manual
+	previous output with Images
+	
+	Threat model ( Attacker and Defender perspective)
+	Checkings Explanation ( why each step was taken )
+	Secure principles with the bash and how to modify
+	
+	
+	
+THINKING 
+
+whoami, this will help know who has access
+id, where they belong
+groups what group they belong to, if any
+
+what type of system is this:
+	Distro
+	Kernel
+	Version
+	
+	Only important things to be displayed
+	
+other user, groups available remotely or locally. 
+
+Background running , the services, necessary and unnecessary
+open ports
+what run as root
+
+Touchable, 
+
+world writable files 
+SUID binaries 
+
+::: Sensitive configurations
+
+
+First of all :::: Gather information on who you are on the system and what previlege you have at the moment.
+
+
+UID ran
+:::::: important note, UID,GID,SUDO,ADM (access logs),WIRESHARK
